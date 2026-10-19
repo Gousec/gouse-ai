@@ -1,52 +1,67 @@
-# Hi, I'm Gouse 👋
+# RAG Document Assistant
 
-### AI/ML Engineer | NLP | LLMs | Deep Learning
+A portfolio project exploring **Retrieval-Augmented Generation (RAG)**: retrieving relevant passages from documents and using them to help answer questions with traceable sources.
 
-I'm interested in building practical AI systems with machine learning, natural language processing, and generative AI. I also enjoy working with data engineering tools to prepare and process data at scale.
+**Status:** 🚧 In development. The roadmap below describes intended features; they should be marked complete only after implementation and testing.
 
-- 🧠 **Focus areas:** NLP, LLM applications, transformers, and deep learning
-- 🐍 **Programming:** Python, SQL, Java
-- 🤖 **ML tools:** Scikit-learn, TensorFlow, PyTorch
-- ⚙️ **Data engineering:** Apache Spark, PySpark, Hadoop, Hive
-- 📚 **Currently exploring:** Retrieval-Augmented Generation (RAG), LLM evaluation, and model deployment
+## 🎯 Goals
 
-## 🚀 Featured Project
+- Ingest documents and split them into searchable chunks
+- Retrieve relevant context for a user question
+- Generate answers grounded in retrieved passages
+- Show source references so users can verify answers
+- Evaluate retrieval and answer quality with a repeatable test set
 
-### RAG Document Assistant
+## 🧱 Planned Architecture
 
-A project to build a document question-answering assistant using retrieval-augmented generation.
+1. **Document ingestion** — load and normalize supported documents
+2. **Chunking** — split text into configurable overlapping chunks
+3. **Indexing** — create embeddings and store searchable chunks
+4. **Retrieval** — find context relevant to each question
+5. **Answer generation** — respond using retrieved context
+6. **Evaluation** — measure retrieval quality, answer faithfulness, latency, and cost
 
-**Planned capabilities**
-- Ingest and chunk documents
-- Retrieve relevant passages using semantic search
-- Generate answers grounded in retrieved context
-- Provide source references for answers
-- Evaluate retrieval quality and answer faithfulness
+## 🛠️ Proposed Stack
 
-> **Status:** In development. Features and evaluation results will be documented as they are implemented and tested.
+- **Language:** Python
+- **API:** FastAPI
+- **Retrieval:** embedding-based semantic search; hybrid retrieval may be added
+- **Testing:** pytest
+- **Packaging:** Docker
 
-## 🧰 Technologies
+The implementation will choose specific libraries and models based on reproducibility, resource requirements, and evaluation results.
 
-**Languages:** Python · SQL · Java
+## 🚀 Getting Started
 
-**Machine Learning:** Scikit-learn · TensorFlow · PyTorch
+Implementation is not yet ready for a runnable installation. Setup instructions, dependencies, example documents, and runnable commands will be added as the first version is completed.
 
-**NLP & GenAI:** Transformers · BERT · LLM applications · RAG
+## 📏 Evaluation Plan
 
-**Big Data:** Apache Spark · PySpark · Hadoop · Hive
+The project will use a small, documented question-and-answer test set to assess:
 
-**Tools:** Git · GitHub · Linux · Jupyter Notebook
+- **Retrieval:** Recall@K and/or MRR
+- **Answer quality:** correctness, faithfulness to retrieved context, and citation support
+- **System performance:** response latency and estimated cost where applicable
 
-## 🎓 Education
+No performance numbers are published yet; measurements will be added after experiments are run.
 
-- Postgraduate studies in Artificial Intelligence and Machine Learning
-- Executive Postgraduate Certificate in Machine Learning and NLP — IIIT Bangalore
+## 🗺️ Roadmap
 
-## 🤝 Connect
+- [ ] Add document loading and chunking
+- [ ] Implement semantic retrieval
+- [ ] Generate grounded answers with source references
+- [ ] Add a repeatable evaluation set and metrics
+- [ ] Expose the pipeline through an API
+- [ ] Add automated tests and Docker support
+- [ ] Document measured results and known limitations
 
-- GitHub: [@Gousec](https://github.com/Gousec)
-- LinkedIn: Add your LinkedIn profile URL
+## 👋 About
+
+I'm Gouse, an AI/ML practitioner interested in NLP, LLM applications, deep learning, and scalable data processing.
+
+- GitHub profile: [@Gousec](https://github.com/Gousec)
+- More projects: [Browse my repositories](https://github.com/Gousec?tab=repositories)
 
 ---
 
-*Building, learning, and improving one project at a time.*
+*Built incrementally with an emphasis on reproducibility, evaluation, and practical engineering.*
