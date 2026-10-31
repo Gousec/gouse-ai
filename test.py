@@ -3,3 +3,5 @@ class(chinnu):
         self.name = name
         self.age = age
         
+import numpy as np 
+import pandas as pd 
